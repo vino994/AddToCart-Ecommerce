@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #11224e;
+  --color-accent: #f87b1b;
+  --color-soft: #cbd99b;
+  --color-neutral: #e6e6e6;
+}
+
+/* Base setup */
+body {
+  @apply text-[var(--color-primary)] bg-gradient-to-b from-[#CBD99B]/20 to-[#E6E6E6] 
+         dark:from-[#11224E] dark:to-[#0b1733] transition-colors duration-500;
+}
+
+img {
+  display: block;
+}
+
+.shadow-box {
+  @apply border border-[var(--color-soft)] shadow-md rounded-xl transition duration-300;
+}
+
+button {
+  transition: all 0.25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+
+.bbh-sans-bartle-regular {
+   font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
