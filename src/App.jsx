@@ -74,7 +74,7 @@ export default function App() {
 
       {/*  Filter Bar */}
       <main className="max-w-6xl mx-auto p-6">
-        <div className="shadow-md bg-[#CBD99B]/40 dark:bg-[#11224E] p-5 mb-6 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center text-center rounded-xl border border-[#CBD99B]">
+        <div className="shadow-md bg-[#CBD99B]/40 dark:bg-[#11224E] p-5 mb-6 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-between text-center rounded-xl border border-[#CBD99B]">
           <input
             type="text"
             placeholder="Search products..."

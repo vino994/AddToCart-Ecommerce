@@ -21,11 +21,11 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="text-center md:text-left md:w-1/2">
             <h1 className="font-bbh text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
-  Discover Modern Fashion <br />
-  & Lifestyle Essentials
-</h1>
+              Discover Modern Fashion <br />& Lifestyle Essentials
+            </h1>
             <p className="text-lg mt-4 opacity-90">
-              Explore premium collections, hand-picked for style, comfort, and everyday confidence.
+              Explore premium collections, hand-picked for style, comfort, and
+              everyday confidence.
             </p>
             <button className="mt-6 bg-[#11224E] text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-[#CBD99B] hover:text-[#11224E] transition">
               🛍️ Start Shopping

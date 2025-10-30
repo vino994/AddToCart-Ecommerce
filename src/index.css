@@ -3,41 +3,112 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==== Black & White Theme ==== */
 :root {
-  --color-primary: #11224e;
-  --color-accent: #f87b1b;
-  --color-soft: #cbd99b;
-  --color-neutral: #e6e6e6;
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #000000;
+  --color-text-light: #000000;
+  --color-text-dark: #ffffff;
+  --color-border: #000000;
 }
 
-/* Base setup */
+/* ==== Base Setup ==== */
 body {
-  @apply text-[var(--color-primary)] bg-gradient-to-b from-[#CBD99B]/20 to-[#E6E6E6] 
-         dark:from-[#11224E] dark:to-[#0b1733] transition-colors duration-500;
+  @apply transition-colors duration-500 font-sans;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
 }
 
-img {
-  display: block;
+.dark body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }
 
+/* ==== Common Styles ==== */
 .shadow-box {
-  @apply border border-[var(--color-soft)] shadow-md rounded-xl transition duration-300;
+  @apply rounded-lg transition duration-300;
+  border: 2px solid var(--color-border);
+  background-color: transparent;
 }
 
+input,
+select,
 button {
-  transition: all 0.25s ease;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+
+.dark input,
+.dark select,
+.dark button {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }
+
+input:focus,
+select:focus,
+button:hover {
+  background-color: var(--color-border);
+  color: var(--color-bg-light);
+}
+
+.dark button:hover,
+.dark input:focus,
+.dark select:focus {
+  background-color: var(--color-bg-light);
+  color: var(--color-bg-dark);
+}
+
+footer {
+  border-top: 2px solid var(--color-border);
+}
+
 .animate-fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .bbh-sans-bartle-regular {
-   font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Orbitron", sans-serif;
+}
+/* =====================================
+   🧩 Wireframe Mode Styles
+   ===================================== */
+.wireframe * {
+  color: #000 !important;
+  background: #fff !important;
+  border-color: #000 !important;
+  box-shadow: none !important;
+}
+
+.dark.wireframe * {
+  color: #fff !important;
+  background: #000 !important;
+  border-color: #fff !important;
+}
+
+.wireframe img {
+  filter: grayscale(100%) contrast(120%);
+}
+
+.wireframe button:hover,
+.wireframe input:focus,
+.wireframe select:focus {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.dark.wireframe button:hover,
+.dark.wireframe input:focus,
+.dark.wireframe select:focus {
+  background-color: #fff !important;
+  color: #000 !important;
 }
